@@ -22,7 +22,6 @@ First, connect Arduino Mega 2560 to your computer via serial USB connection.
 
 .. code-block:: bash
 
-   test
    cd /home/$USER
    git clone https://github.com/ffermo/EZ-RASSOR_Arduino
    cd EZ-RASSOR_Arduino
