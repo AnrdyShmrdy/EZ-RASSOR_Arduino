@@ -15,7 +15,7 @@ Adafruit_StepperMotor *br_wheel = BackWheelMS.getStepper(200, 2); // Back right 
 
 
 // Node handler for ROS.
-ros::NodeHandle  nh;
+ros::NodeHandle nh;
 
 // /wheel_instructions topic handler.
 void twistCb( const geometry_msgs::Twist& msg)
@@ -26,52 +26,43 @@ void twistCb( const geometry_msgs::Twist& msg)
 
 	if (msg.linear.x == 1) // Move forward.
 	{
-		while (msg.linear.x == 1)
-		{
-			fl_wheel->onestep(FORWARD, SINGLE);
-			bl_wheel->onestep(FORWARD, SINGLE);
-			fr_wheel->onestep(BACKWARD, SINGLE);
-			br_wheel->onestep(BACKWARD, SINGLE);
-			nh.spinOnce();
-		}
+		fl_wheel->onestep(FORWARD, SINGLE);
+		bl_wheel->onestep(FORWARD, SINGLE);
+		fr_wheel->onestep(BACKWARD, SINGLE);
+		br_wheel->onestep(BACKWARD, SINGLE);
 	}  
 	else if (msg.linear.x == -1) // Move backward.
 	{
-		while (msg.linear.x == -1)
-		{
-			fl_wheel->onestep(BACKWARD, SINGLE);
-			bl_wheel->onestep(BACKWARD, SINGLE);
-			fr_wheel->onestep(FORWARD, SINGLE);
-			br_wheel->onestep(FORWARD, SINGLE);
-			nh.spinOnce();
-		}
+		fl_wheel->onestep(BACKWARD, SINGLE);
+		bl_wheel->onestep(BACKWARD, SINGLE);
+		fr_wheel->onestep(FORWARD, SINGLE);
+		br_wheel->onestep(FORWARD, SINGLE);
 	}  
 	else if (msg.angular.z == 1 ) // Turn left.
 	{
-		while (msg.angular.z == 1)
-		{
-			fl_wheel->onestep(FORWARD, SINGLE);
-			bl_wheel->onestep(FORWARD, SINGLE);
-			fr_wheel->onestep(FORWARD, SINGLE);
-			br_wheel->onestep(FORWARD, SINGLE);
-			nh.spinOnce();
-		}
+		fl_wheel->onestep(FORWARD, SINGLE);
+		bl_wheel->onestep(FORWARD, SINGLE);
+		fr_wheel->onestep(FORWARD, SINGLE);
+		br_wheel->onestep(FORWARD, SINGLE);
 	}  
 	else if (msg.angular.z == -1 ) // Turn right.
 	{
-		while (msg.angular.z == -1)
-		{
-			fl_wheel->onestep(BACKWARD, SINGLE);
-			bl_wheel->onestep(BACKWARD, SINGLE);
-			fr_wheel->onestep(BACKWARD, SINGLE);
-			br_wheel->onestep(BACKWARD, SINGLE);
-			nh.spinOnce();
-		}
-	}  
+		fl_wheel->onestep(BACKWARD, SINGLE);
+		bl_wheel->onestep(BACKWARD, SINGLE);
+		fr_wheel->onestep(BACKWARD, SINGLE);
+		br_wheel->onestep(BACKWARD, SINGLE);
+	}
+	else
+	{
+		fl_wheel->release();
+		bl_wheel->release();
+		fr_wheel->release();
+		br_wheel->release();
+	}
 }
 
 // Subscriber for topics and initializes callbacks (second parameter) for functions.
-ros::Subscriber<geometry_msgs::Twist> subTwist("/wheel_instructions", &twistCb );
+ros::Subscriber<geometry_msgs::Twist> subTwist("/wheel_instructions", &twistCb);
 
 void setup()
 { 

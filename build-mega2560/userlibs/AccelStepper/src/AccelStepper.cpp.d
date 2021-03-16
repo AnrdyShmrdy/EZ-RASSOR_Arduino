@@ -1,6 +1,6 @@
 build-mega2560/userlibs/AccelStepper/src/AccelStepper.cpp.o: \
- /home/francis/RASSOR_Arduino/libraries/AccelStepper/src/AccelStepper.cpp \
- /home/francis/RASSOR_Arduino/libraries/AccelStepper/src/AccelStepper.h \
+ /home/francis/EZ-RASSOR_Arduino/libraries/AccelStepper/src/AccelStepper.cpp \
+ /home/francis/EZ-RASSOR_Arduino/libraries/AccelStepper/src/AccelStepper.h \
  /usr/share/arduino/hardware/arduino//cores/arduino/Arduino.h \
  /usr/share/arduino/hardware/arduino//cores/arduino/binary.h \
  /usr/share/arduino/hardware/arduino//cores/arduino/WCharacter.h \

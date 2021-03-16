@@ -1,4 +1,4 @@
-build-mega2560/accel_stepper.ino.o: accel_stepper.ino \
+build-mega2560/ezrassor_twist_stepper.ino.o: ezrassor_twist_stepper.ino \
  /usr/share/arduino/hardware/arduino//cores/arduino/Arduino.h \
  /usr/share/arduino/hardware/arduino//cores/arduino/binary.h \
  /usr/share/arduino/hardware/arduino//cores/arduino/WCharacter.h \
@@ -31,5 +31,4 @@ build-mega2560/accel_stepper.ino.o: accel_stepper.ino \
  /home/francis/EZ-RASSOR_Arduino/libraries/Adafruit_Motor_Shield_V2_Library/Adafruit_MotorShield.h \
  /home/francis/EZ-RASSOR_Arduino/libraries/Adafruit_Motor_Shield_V2_Library/utility/Adafruit_MS_PWMServoDriver.h \
  /usr/share/arduino/libraries/Wire/Wire.h \
- /usr/share/arduino/hardware/arduino//cores/arduino/Stream.h \
- /home/francis/EZ-RASSOR_Arduino/libraries/AccelStepper/src/AccelStepper.h
+ /usr/share/arduino/hardware/arduino//cores/arduino/Stream.h
