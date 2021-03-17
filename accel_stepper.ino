@@ -6,7 +6,9 @@
 
 // Constants for EZ-RASSOR wheel velocity.
 #define LINEAR_SPS 266.00 // Steps per second to achieve one meter/second
-#define ANGULAR_SPS 10.456 // Angular steps per second to achieve one radian/second (?)
+#define ANGULAR_SPS 266.00 // Angular steps per second to achieve one radian/second (?)
+#define WHEEL_RAD .120 // Radius of wheel in meters.
+#define WHEEL_DIST .400 // Distance between left and right wheels in meters.
 
 // Drop of solder on motorshield determines the address inside Adafruit_Motorshield(). Empty parameter in Adafruit_MotorShield() means default address (0x60). Google "Stacking Motorshields" to learn more about the soldering process.
 Adafruit_MotorShield FrontWheelMS = Adafruit_MotorShield(); // Address 0x60 will be used for front wheels.
