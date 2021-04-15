@@ -12,9 +12,9 @@ DEPENDENCIES
 - `Arduino-Mk`_
 - `Arduino IDE`_
 - `ROSSerial for Arduino`_ (ROS Melodic)
-- `ros_lib` Arduino Library
-- `Adafruit MotorShield V2` Arduino Library
-- `AccelStepper` Library
+- `ros_lib`_ Arduino Library
+- `Adafruit MotorShield V2`_ Arduino Library
+- `AccelStepper`_ Library
 
 Do NOT install Arduino IDE or the Arduino-Mk package using Ubuntu's APT package manager (i.e. "sudo apt install ..."). Doing this mistakenly installs outdated libraries and dependencies that are required for the Arduino firmware.
 
