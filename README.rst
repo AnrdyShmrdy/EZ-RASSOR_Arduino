@@ -18,9 +18,11 @@ DEPENDENCIES
 
 Do NOT install Arduino IDE or the Arduino-Mk package using Ubuntu's APT package manager (i.e. "sudo apt install ..."). Doing this mistakenly installs outdated libraries and dependencies that are required for the Arduino firmware.
 
-To install the Arduino IDE, please follow the Ubuntu's `Arduino IDE installation`_ tutorial. Make note of the installation directory.
+To install the Arduino IDE, please follow the Ubuntu's `Arduino IDE installation`_ tutorial. 
 
-To install Arduino-Mk, follow the `installation from source`_ instructions from the Arduino-Mk Github repository. Make note of installation directory.
+To install Arduino-Mk, follow the `installation from source`_ instructions from the Arduino-Mk Github repository.
+
+IMPORTANT: Make note of the installation directory of both Arduino IDE and Arduino-Mk.
 
 Compile and Upload Instructions
 -------------------------------
@@ -55,7 +57,7 @@ This method is useful and preferred when Arduino is connected to a computer (Jet
    git clone https://github.com/ffermo/EZ-RASSOR_Arduino
    cd EZ-RASSOR_Arduino
 
-Before attempting to compile and upload, be sure to review the Makefile in the root directory. This file contains path pointers to Arduino IDE and Arduino-Mk installations, location of this repository, and included libraries.
+IMPORTANT: Before attempting to compile and upload, be sure to review the Makefile in the root directory. Depending on where you installed the Arduino IDE and Arduino-Mk, the Makefile will need to be edited to fit your environment.
 
 Compile and upload code to Mega.
 

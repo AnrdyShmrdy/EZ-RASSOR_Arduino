@@ -1,0 +1,5 @@
+# For notes regarding running for EZ-RASSOR Arduino to be added to README.
+
+input_over_ssh
+
+	python3 -u -m input_over_ssh.client -p /dev/input/event18 | ssh -Y 192.168.1.39 'PYTHONPATH=/home/francis/git/input-over-ssh python3 -m input_over_ssh.server'

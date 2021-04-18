@@ -5,11 +5,11 @@ BOARD_SUB = atmega2560
 # Path where repository was cloned or downloaded.
 ARDUINO_SKETCHBOOK = /home/$(USER)/EZ-RASSOR_Arduino
 
-# Path where Arduino IDE is installed.
+# Path where Arduino IDE is installed. Edit this line depending on where the Arduino IDE is installed.
 ARDUINO_DIR = /opt/arduino-1.8.13
 
 # Library dependencies found in libraries folder.
 ARDUINO_LIBS = Adafruit_Motor_Shield_V2_Library ros_lib AccelStepper Wire
 
-# Arduino.mk file from Arduino-Mk installation directory.
+# Arduino.mk file from Arduino-Mk installation directory. Edit this line depending on where Arduino-Mk is installed.
 include /home/$(USER)/git/Arduino-Makefile/Arduino.mk
